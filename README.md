@@ -1,5 +1,7 @@
 # Countries Holidays
 
+![image](https://github.com/user-attachments/assets/71bf4d0d-ab2b-4887-b7ff-89c8e2a534eb)
+
 Test task. Application use open-source Nager.Date API that provides data about holidays in different countries.
 Application was developed with Nuxt.js and Tailwind CSS. Also application allows view holidays for specific country and year. 
 For search field on home page implemented Back/Forward functionality.
