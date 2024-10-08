@@ -1,7 +1,8 @@
 export const getHolidays = async (year: string, countryCode: string) => {
     try {
+        const config = useRuntimeConfig()
         const fetchedHolidays = await fetch(
-            `https://date.nager.at/api/v3/PublicHolidays/${year}/${countryCode}`
+            config.public.API_URL + `/PublicHolidays/${year}/${countryCode}`
         );
 
         if (fetchedHolidays.ok) {

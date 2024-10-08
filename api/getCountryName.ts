@@ -1,7 +1,8 @@
 export const getCountry = async (countryCode: string) => {
     try {
+        const config = useRuntimeConfig()
         const fetchCountry = await fetch(
-            `https://date.nager.at/api/v3/CountryInfo/${countryCode}`
+            config.public.API_URL + `/CountryInfo/${countryCode}`
         );
         if (fetchCountry.ok) {
             return await fetchCountry.json();

@@ -1,7 +1,8 @@
 export const getCountries = async () => {
     try {
+        const config = useRuntimeConfig()
         const fetchCountries = await fetch(
-            'https://date.nager.at/api/v3/AvailableCountries'
+            config.public.API_URL + '/AvailableCountries'
         );
 
         if (fetchCountries.ok) {

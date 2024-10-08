@@ -1,7 +1,8 @@
 export const getNextHolidayByCode = async (countryCode: string) => {
     try {
+        const config = useRuntimeConfig()
         const fetchNextPublicHolidays = await fetch(
-            `https://date.nager.at/api/v3/NextPublicHolidays/${countryCode}`
+            config.public.API_URL + `/NextPublicHolidays/${countryCode}`
         );
 
         if (fetchNextPublicHolidays.ok) {
