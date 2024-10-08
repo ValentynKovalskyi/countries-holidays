@@ -18,7 +18,7 @@ import { getCountry } from '@api/getCountryName';
 
 const route = useRoute();
 const countryName = ref<string>();
-const year = ref<string>('2024');
+const year = ref<string>(new Date().getFullYear().toString());
 const holidays = ref<Holiday[]>([]);
 
 const fetchHolidays = async () =>

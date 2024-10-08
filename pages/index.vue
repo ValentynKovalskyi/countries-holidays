@@ -47,7 +47,6 @@ const handleSearchUpdate = (newValue: string) => (searchValue.value = newValue);
 onMounted(async () => {
     countries.value = await getCountries();
 });
-console.log(123);
 
 definePageMeta({
     name: 'index',

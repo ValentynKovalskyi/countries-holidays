@@ -13,4 +13,9 @@ export default defineNuxtConfig({
         ),
         '@api': fileURLToPath(new URL('./api', import.meta.url)),
     },
+    runtimeConfig: {
+        public: {
+            API_URL: process.env.API_URL,
+        }
+    }
 });

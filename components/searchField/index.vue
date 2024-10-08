@@ -37,17 +37,20 @@ const historyIndex = ref<number | null>(null);
 const maxHistoryLength = ref<number>(50);
 
 const handleInput = (searchValue: string) => {
+    console.log(changesHistory.value)
     emit('update', searchValue);
     if (historyIndex.value !== null) {
+        console.log(historyIndex.value)
         changesHistory.value = changesHistory.value.slice(
             0,
-            historyIndex.value
+            historyIndex.value + 1
         );
         historyIndex.value = null;
     }
 };
 
 const handleChange = () => {
+    console.log(changesHistory.value)
     if (
         searchValue.value !==
         changesHistory.value[changesHistory.value.length - 1]
@@ -60,6 +63,7 @@ const handleChange = () => {
 };
 
 const handleBack = () => {
+    console.log(changesHistory.value)
     if (historyIndex.value !== null && historyIndex.value > 0)
         --historyIndex.value;
     else if (historyIndex.value !== 0)
@@ -69,6 +73,7 @@ const handleBack = () => {
 };
 
 const handleForward = () => {
+    console.log(changesHistory.value)
     if (
         historyIndex.value !== null &&
         historyIndex.value < changesHistory.value.length - 1
