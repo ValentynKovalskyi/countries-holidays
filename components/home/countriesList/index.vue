@@ -1,7 +1,7 @@
 <template>
   <div class="overflow-y-scroll no-scrollbar h-4/6 flex flex-col gap-5 px-5">
       <template v-for="country of countries" :key="country.name">
-          <HomeCountriesListCountryButton :name="country.name" />
+          <HomeCountriesListCountryButton :name="country.name" :code="country.countryCode" />
       </template>
   </div>
 </template>

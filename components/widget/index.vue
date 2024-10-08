@@ -27,6 +27,7 @@ const pickRandomCountries = async () => {
 
     const widgetCountryInfo: WidgetCountryInfo = {
       countryName: randomCountry.name,
+      countryCode: randomCountry.countryCode,
       nextHoliday: nextHoliday.name,
       date: nextHoliday.date,
     }
