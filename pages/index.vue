@@ -26,6 +26,7 @@
 
 <script setup lang="ts">
 import type { Country } from "@types/country.type";
+import { getCountries } from "@api/getCountries";
 
 const countries = ref<Country[]>()
 const searchValue = ref<string>('')
@@ -38,11 +39,7 @@ const filteredCountries = computed(() => {
 const handleSearchUpdate = (newValue: string) => searchValue.value = newValue
 
 onMounted(async () => {
-  const fetchCountries = await fetch('https://date.nager.at/api/v3/AvailableCountries')
-
-  if(fetchCountries.ok) {
-    countries.value = await fetchCountries.json()
-  }
+    countries.value = await getCountries()
 })
 
 definePageMeta({
