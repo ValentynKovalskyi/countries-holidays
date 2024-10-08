@@ -1,75 +1,52 @@
-# Nuxt 3 Minimal Starter
+# Countries Holidays
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Test task. Application use open-source Nager.Date API that provides data about holidays in different countries.
+Application was developed with Nuxt.js and Tailwind CSS. Also application allows view holidays for specific country and year. 
+For search field on home page implemented Back/Forward functionality.
 
-## Setup
+Application use typical Nuxt architecture.
+
+Main directories:
+* In pages directory placed two pages: Home page and page with country info.
+* Directory components includes components sorted by purpose.
+* Custom directory "api" contains scripts for operating with Nager.Date API.
+* Directory utils contains utility data and functionality as constants, types etc.
+
+
+
+## Setup and start development
 
 Make sure to install the dependencies:
 
 ```bash
-# npm
+
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+Create .env file and fill with folowing information:
+```bash
 
-Start the development server on `http://localhost:3000`:
+API_URL="https://date.nager.at/api/v3"
+
+```
+Start development server:
 
 ```bash
-# npm
+
 npm run dev
 
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+Follow: http://localhost:3000
+
+## Build for production
 
 Build the application for production:
 
 ```bash
-# npm
+
 npm run build
 
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
